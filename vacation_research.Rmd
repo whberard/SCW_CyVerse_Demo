@@ -22,6 +22,38 @@ gap.in %>%
 vacay.data
 ```
 
+
+# GDP for our vacation possibilities
+
+Now, I'm going to plot year vs GDP. Watch this!
+
+## Czech Republic
+
+```{r}
+cz = vacay.data$country=="Czech Republic"
+plot(vacay.data$year[cz], vacay.data$gdpPercap[cz])
+```
+
+Dude, look! Something happened in the Czech Republic in the early nineties!
+
+## Greece
+
+```{r}
+gr = vacay.data$country=="Greece"
+plot(vacay.data$year[gr], vacay.data$gdpPercap[gr])
+```
+
+I wonder what this would look like if we had more recent data.....
+
+## Portugal
+
+```{r}
+pt = vacay.data$country=="Portugal"
+plot(vacay.data$year[pt], vacay.data$gdpPercap[pt])
+```
+
+Ok. This is a bit more stable.
+
 You can also embed plots, for example:
 
 ```{r, echo=FALSE}
