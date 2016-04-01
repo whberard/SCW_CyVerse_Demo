@@ -9,8 +9,17 @@ This is an R Markdown document. Markdown is a simple formatting syntax for autho
 
 When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
 
+
+The first thing I'm doing here is reading in the data, and choosing only the data I want: 
+
 ```{r}
-summary(cars)
+# install.packages("dplyr", dependencies = TRUE) # only do this once!
+library("dplyr")
+
+gap.in <- read.csv("http://naupaka.net/files/gapminder.csv")
+gap.in %>%
+  filter(country %in% c("Czech Republic", "Greece", "Portugal")) -> vacay.data
+vacay.data
 ```
 
 You can also embed plots, for example:
